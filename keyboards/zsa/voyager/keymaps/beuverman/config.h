@@ -1,0 +1,2 @@
+#define TAP_CODE_DELAY 20
+#define RETRO_TAPPING
