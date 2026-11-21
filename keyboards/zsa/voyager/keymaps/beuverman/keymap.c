@@ -48,12 +48,39 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
+
 // Note COMBO_ONLY_FROM_LAYER config could reduce these to one combo
 const uint16_t PROGMEM GAM_ON[]  = {KC_Q, KC_M, KC_W, COMBO_END};
 const uint16_t PROGMEM GAM_OFF[] = {KC_Z, KC_X, KC_C, COMBO_END};
 combo_t key_combos[] = {
     COMBO(GAM_ON, TG(4)),
     COMBO(GAM_OFF, TG(4)),
+};
+
+
+const key_override_t override_1 = ko_make_basic(MOD_MASK_SHIFT, KC_1, KC_1);
+const key_override_t override_2 = ko_make_basic(MOD_MASK_SHIFT, KC_2, KC_2);
+const key_override_t override_3 = ko_make_basic(MOD_MASK_SHIFT, KC_3, KC_3);
+const key_override_t override_4 = ko_make_basic(MOD_MASK_SHIFT, KC_4, KC_4);
+const key_override_t override_5 = ko_make_basic(MOD_MASK_SHIFT, KC_5, KC_5);
+const key_override_t override_6 = ko_make_basic(MOD_MASK_SHIFT, KC_6, KC_6);
+const key_override_t override_7 = ko_make_basic(MOD_MASK_SHIFT, KC_7, KC_7);
+const key_override_t override_8 = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_8);
+const key_override_t override_9 = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_9);
+const key_override_t override_0 = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_0);
+
+// This globally defines all key overrides to be used
+const key_override_t *key_overrides[] = {
+	&override_1,
+    &override_2,
+    &override_3,
+    &override_4,
+    &override_5,
+    &override_6,
+    &override_7,
+    &override_8,
+    &override_9,
+    &override_0
 };
 
 // const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
