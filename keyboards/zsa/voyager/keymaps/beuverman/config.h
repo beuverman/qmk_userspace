@@ -1,2 +1,2 @@
+#define QUICK_TAP_TERM 0
 #define TAP_CODE_DELAY 20
-#define RETRO_TAPPING
