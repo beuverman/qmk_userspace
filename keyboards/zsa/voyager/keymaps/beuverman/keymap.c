@@ -6,7 +6,6 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Keypad num row?
-    // Double-tap top right to gaming (tap-dance)
     // gui / control key
     // alt / x
     // swap to numpad layer + double tap to shortcuts
@@ -40,6 +39,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _______, KC_KP_0,     KC_KP_1, KC_KP_2, KC_KP_3, KC_PERC,                  _______, _______, _______, _______, _______, _______,
                                                      _______, _______,    _______, _______
     ),
+    [4] = LAYOUT(
+        KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         _______, _______, _______, _______, _______, _______,
+        KC_T,    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,                         _______, _______, _______, _______, _______, _______,
+        KC_LCTL, KC_LSFT, KC_A,    KC_S,    KC_D,    KC_F,                         _______, _______, _______, _______, _______, _______,
+        KC_B,    KC_G,    KC_Z,    KC_X,    KC_C,    KC_V,                         _______, _______, _______, _______, _______, _______,
+                                                     KC_SPC,  KC_LALT,    _______, _______
+    ),
+};
+
+// Note COMBO_ONLY_FROM_LAYER config could reduce these to one combo
+const uint16_t PROGMEM GAM_ON[]  = {KC_Q, KC_M, KC_W, COMBO_END};
+const uint16_t PROGMEM GAM_OFF[] = {KC_Z, KC_X, KC_C, COMBO_END};
+combo_t key_combos[] = {
+    COMBO(GAM_ON, TG(4)),
+    COMBO(GAM_OFF, TG(4)),
 };
 
 // const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
