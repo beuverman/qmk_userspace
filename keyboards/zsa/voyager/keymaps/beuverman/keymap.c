@@ -4,6 +4,10 @@
 
 #include QMK_KEYBOARD_H
 
+enum custom_keycodes {
+    USR_NAME = SAFE_RANGE,
+};
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // Keypad num row?
     // gui / control key
@@ -28,7 +32,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT(
         _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, QK_BOOT,
         _______, _______, KC_MEDIA_PLAY_PAUSE,LCTL(KC_A),LCTL(KC_C),LCTL(KC_V),                      KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, KC_CAPS,
-        _______, _______, LSFT(KC_LEFT_GUI),LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),LGUI(LSFT(KC_S)),        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
+        _______, USR_NAME, LSFT(KC_LEFT_GUI),LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),LGUI(LSFT(KC_S)),        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
         _______, _______, KC_LEFT_ALT,LALT(LSFT(KC_TAB)),LALT(KC_TAB),LGUI(LSFT(KC_T)),              _______, _______, _______, _______, _______, _______,
                                                      _______, _______,    _______, _______
     ),
@@ -47,6 +51,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                      KC_SPC,  KC_LALT,    _______, _______
     ),
 };
+
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case USR_NAME:
+            if (record->event.pressed) {
+                SEND_STRING("TheNamel3s5One");
+            }
+            return false; 
+    }
+    return true;
+}
 
 
 // Note COMBO_ONLY_FROM_LAYER config could reduce these to one combo
