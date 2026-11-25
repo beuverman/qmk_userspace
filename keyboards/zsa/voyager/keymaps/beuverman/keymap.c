@@ -15,9 +15,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // swap to numpad layer + double tap to shortcuts
     [0] = LAYOUT(
         KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
-        MT(MOD_LSFT, KC_TAB),KC_B,KC_L,KC_D,KC_C,    KC_V,                         KC_J,    KC_Y,    KC_O,    KC_U,    KC_SCLN,    KC_BSLS,
-        SH_OS,   KC_N,    KC_R,    KC_T,    KC_S,    KC_G,                         KC_P,    KC_H,    KC_A,    KC_E,    KC_I,   RSFT_T(KC_QUOTE),
-        KC_LCTL, ALT_T(KC_X),KC_Q, KC_M,    KC_W,    KC_Z,                         KC_K,    KC_F,    KC_COMMA,KC_DOT,  RALT_T(KC_SLSH), KC_RCTL,
+        KC_TAB,  KC_B,    KC_L,    KC_D,    KC_C,    KC_V,                         KC_J,    KC_Y,    KC_O,    KC_U,    KC_SCLN, KC_BSLS,
+        SH_OS,   LGUI_T(KC_N),LALT_T(KC_R),LCTL_T(KC_T),LSFT_T(KC_S),KC_G,         KC_P,RSFT_T(KC_H),RCTL_T(KC_A),RALT_T(KC_E),RGUI_T(KC_I),KC_QUOTE,
+        KC_LCTL, KC_X,    KC_Q,    KC_M,    KC_W,    KC_Z,                         KC_K,    KC_F,    KC_COMMA,KC_DOT,  KC_SLSH, KC_RCTL,
                                 LT(1,KC_SPACE), LT(3, KC_TAB),           LT(2, KC_ENTER), LSFT_T(KC_BSPC)
     ),
     [1] = LAYOUT(
@@ -51,6 +51,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                                      KC_SPC,  KC_LALT,    _______, _______
     ),
 };
+
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    // "Timeless" home row mods
+    if (record->event.key.row == 2 || record->event.key.row == 8) {
+        return TAPPING_TERM + 50;
+    }
+
+    return TAPPING_TERM;
+}
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
