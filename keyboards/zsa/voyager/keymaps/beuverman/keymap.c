@@ -38,9 +38,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [3] = LAYOUT(
         _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
-        _______, KC_KP_SLASH, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_ASTERISK,           _______, _______, _______, _______, _______, _______,
-        _______, KC_KP_MINUS, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS,               _______, _______, _______, _______, _______, _______,
-        _______, KC_KP_0,     KC_KP_1, KC_KP_2, KC_KP_3, KC_PERC,                  _______, _______, _______, _______, _______, _______,
+        _______, KC_KP_SLASH, KC_KP_7, KC_KP_8, KC_KP_9, KC_KP_ASTERISK,           _______, MS_BTN1, MS_UP,   MS_BTN2, _______, _______,
+        _______, KC_KP_MINUS, KC_KP_4, KC_KP_5, KC_KP_6, KC_KP_PLUS,               _______, MS_LEFT, MS_DOWN, MS_RGHT, _______, _______,
+        _______, KC_KP_0,     KC_KP_1, KC_KP_2, KC_KP_3, KC_PERC,                  _______, MS_WHLU, MS_BTN3, MS_WHLD, _______, _______,
                                                      _______, _______,    _______, _______
     ),
     [4] = LAYOUT(
