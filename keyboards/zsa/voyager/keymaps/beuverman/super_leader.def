@@ -1,0 +1,4 @@
+SEQ_STR(tno, (KC_T, KC_N, KC_O), "TheNamel3s5One")
+SEQ_STR(ge,  (KC_G, KC_E),       "thenamel3s5one@gmail.com")
+SEQ_STR(pe,  (KC_P, KC_E),       "brandoneuv@gmail.com")
+SEQ_STR(so,  (KC_S, KC_O),       "Best regards,\nBrandon Euverman")
