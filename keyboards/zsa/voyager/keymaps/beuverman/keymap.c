@@ -87,6 +87,8 @@ const key_override_t override_8 = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_8);
 const key_override_t override_9 = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_9);
 const key_override_t override_0 = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_0);
 
+const key_override_t override_bspc = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+
 // This globally defines all key overrides to be used
 const key_override_t *key_overrides[] = {
 	&override_1,
@@ -98,5 +100,6 @@ const key_override_t *key_overrides[] = {
     &override_7,
     &override_8,
     &override_9,
-    &override_0
+    &override_0,
+    &override_bspc
 };
