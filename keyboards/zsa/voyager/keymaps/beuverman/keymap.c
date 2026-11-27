@@ -22,10 +22,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     // rgb controls
     [2] = LAYOUT(
-        _______, _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______, QK_BOOT,
-        _______, _______, KC_MEDIA_PLAY_PAUSE,LCTL(KC_A),LCTL(KC_C),LCTL(KC_V),                      KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, KC_CAPS,
-        _______, USR_NAME, LSFT(KC_LEFT_GUI),LCTL(LSFT(KC_TAB)),LCTL(KC_TAB),LGUI(LSFT(KC_S)),        KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
-        _______, _______, KC_LEFT_ALT,LALT(LSFT(KC_TAB)),LALT(KC_TAB),LGUI(LSFT(KC_T)),              _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, QK_BOOT,
+        _______, _______, KC_VOLD, KC_MUTE, KC_VOLU, _______,                      KC_PGUP, KC_HOME, KC_UP,   KC_END,  _______, KC_CAPS,
+        _______, USR_NAME,KC_MPRV, KC_MPLY, KC_MNXT, KC_WAKE,                      KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, _______, _______,
+        _______, _______, KC_BRID, _______, KC_BRIU, KC_SLEP,                      _______, _______, _______, _______, _______, _______,
                                                      _______, _______,    _______, _______
     ),
     [3] = LAYOUT(
